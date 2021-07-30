@@ -1,0 +1,116 @@
+// Here goes your CSS
+@import 'layout/main';
+
+#success-message {
+	display: none;
+}
+.popup {
+	height: 317px;
+	width: 275px;
+	background-color: white;
+	border-radius: 5px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: 0 auto;
+	display: none;
+	visibility: visible;
+	-webkit-animation: fadeIn 1s;
+	animation: fadeIn 1s;
+}
+.formLogin {	
+	width:75%;
+	text-align: center;
+	margin:0 auto;
+	margin-top: 35px;
+}
+.close {
+	cursor: pointer;
+	position: absolute;
+	top: -4%;
+	right: -4%;
+	color: #fff;
+	background-color: #000;
+	font-weight: bold;	
+	height: 25px;
+	line-height: 22px;  
+	font-family: 'Lobster', cursive;
+	width: 25px;  
+	font-size: 2.2em;
+	font-weight: bold;
+	border-radius: 50%;
+	text-align: center;
+}
+.loginLabel {	
+	font-family: 'Lobster', cursive;
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+#email, #password {
+	font-family: Tahoma;
+	font-size: 12px;
+	color: grey;
+	padding:15px 0px 15px 20px;
+	width:90%;
+	border: 1px solid #000;
+	letter-spacing: 1px;
+}
+#email:hover, #password:hover {
+	color: #000;
+}
+#submit {
+	background-color: #000;
+	border: 1px solid #606060;
+	font-family: Tahoma;
+	font-size: 12px;
+	color: #fff;
+	margin-top: 20px;
+	padding: 10px;
+	width: 100%;
+}   
+#submit:hover {
+	background-color: #fd878e;
+	border: 1px solid #fd878e;
+	transition: background-color 0.5s ease;
+}   
+.checkboxButton {
+	display: block;
+	position: relative;
+	cursor: pointer;
+	font-size: 14px;
+	margin-right: -50px;
+}          
+input[type=checkbox] {
+	visibility: hidden;
+}
+.checkboxButtonControl {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 20px;
+	width: 20px;
+	border: 1px solid black;
+}
+.checkboxButton input:checked ~ .checkboxButtonControl {
+	background-color: transparent;
+}
+.checkboxButtonControl:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+.checkboxButton input:checked ~ .checkboxButtonControl:after {
+	display: block;
+}
+.checkboxButton .checkboxButtonControl:after {
+	left: 5px;
+	bottom: 5px;
+	width: 5px;
+	height: 11px;
+	border: solid black;
+	border-width: 0 4px 4px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
